@@ -1,79 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="159.325" tests="8" skipped="0" failures="1" errors="0">
-<testcase classname="My Account-Login" name="log-in with valid username and password" time="23.222">
-<system-out><![CDATA[
-Given user go to "http://practice.automationtesting.in/"....................passed
-When user click on My Account Menu..........................................passed
-Then user enter registered username in username textbox.....................passed
-Then user enter password in password textbox................................passed
-Then user click on login button.............................................passed
-Then user must successfully login to the web page...........................passed
-And user close driver.......................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="My Account-Login" name="log-in with incorrect username and incorrect password" time="17.589">
-<system-out><![CDATA[
-Given user go to "http://practice.automationtesting.in/"....................passed
-When user click on My Account Menu..........................................passed
-Then user enter incorrect username in username textbox......................passed
-Then user enter incorrect password in password textbox......................passed
-Then user click on login button.............................................passed
-Then user must verify error message Invalid username........................passed
-And user close driver.......................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="My Account-Login" name="log-in with correct username and empty password" time="21.684">
-<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#username&quot;}
-  (Session info: chrome=110.0.5481.178)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [15544b3d58016bba3f4630ca77dc9969, findElement {using=id, value=username}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\Hp\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:51226}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51226/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 15544b3d58016bba3f4630ca77dc9969">
-<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#username"}
-  (Session info: chrome=110.0.5481.178)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [15544b3d58016bba3f4630ca77dc9969, findElement {using=id, value=username}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\Hp\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:51226}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51226/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 15544b3d58016bba3f4630ca77dc9969
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy24.sendKeys(Unknown Source)
-	at stepdefinitions.MyAccountLoginStepDefinitions.Login3_StepDefinitions.userEnterCorrectUsernameInUsernameTextbox(Login3_StepDefinitions.java:13)
-	at ✽.user enter correct username in username textbox(file:///C:/Users/Hp/IdeaProjects/Automation_Testing/src/test/resources/features/my_account_login.feature:28)
-]]>
-</failure>
-<system-out><![CDATA[
-Given user go to "http://practice.automationtesting.in/"....................passed
-When user click on My Account Menu..........................................passed
-Then user enter correct username in username textbox........................failed
-Then user enter empty password in the password textbox......................skipped
-Then user click on login button.............................................skipped
-Then user must verify error message (Invalid password)......................skipped
-And user close driver.......................................................skipped
-]]></system-out>
-</testcase>
-<testcase classname="My Account-Login" name="log-in with empty username and valid password" time="19.092">
+<testsuite name="Cucumber" time="26.408" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="My Account-Login" name="log-in with empty username and valid password" time="25.676">
 <system-out><![CDATA[
 Given user go to "http://practice.automationtesting.in/"....................passed
 When user click on My Account Menu..........................................passed
@@ -81,50 +8,6 @@ Then user enter empty username in username-textbox..........................pass
 Then user enter valid password in the password textbox......................passed
 Then user click on login button.............................................passed
 Then user must verify error message (Invalid username)......................passed
-And user close driver.......................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="My Account-Login" name="log-in with empty username and empty password" time="15.666">
-<system-out><![CDATA[
-Given user go to "http://practice.automationtesting.in/"....................passed
-When user click on My Account Menu..........................................passed
-Then user enter empty username in username-textbox..........................passed
-Then user enter empty password in the password textbox......................passed
-Then user click on login button.............................................passed
-Then user must verify error message (Invalid username)......................passed
-And user close driver.......................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="My Account-Login" name="log-in-Password should be masked" time="17.149">
-<system-out><![CDATA[
-Given user go to "http://practice.automationtesting.in/"....................passed
-When user click on My Account Menu..........................................passed
-Then user enter the password field with some characters.....................passed
-Then The password field should display the characters in asterisks..........passed
-And user close driver.......................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="My Account-Login" name="log-in handles with case sensitive" time="20.933">
-<system-out><![CDATA[
-Given user go to "http://practice.automationtesting.in/"....................passed
-When user click on My Account Menu..........................................passed
-Then user the case changed username in username textbox.....................passed
-Then the case chenged password in the password tetxbox......................passed
-Then user click on login button.............................................passed
-Then login must fail saying incorrect username and password.................passed
-And user close driver.......................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="My Account-Login" name="log-in authentication" time="23.393">
-<system-out><![CDATA[
-Given user go to "http://practice.automationtesting.in/"....................passed
-When user click on My Account Menu..........................................passed
-Then user enter registered username in username textbox.....................passed
-Then user enter password in password textbox................................passed
-Then user click on login button.............................................passed
-Then Once user logged in, sign out of the site..............................passed
-Then user press back button.................................................passed
-Then user shouldn’t be signed in to his account rather a general webpage must be visible.passed
 And user close driver.......................................................passed
 ]]></system-out>
 </testcase>

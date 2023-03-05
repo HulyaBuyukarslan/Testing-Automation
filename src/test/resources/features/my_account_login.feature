@@ -1,7 +1,7 @@
 @myaccount_login
 Feature: My Account-Login
 
- @login_1
+@smoke
   Scenario: log-in with valid username and password
     Given user go to "http://practice.automationtesting.in/"
     When user click on My Account Menu
@@ -11,7 +11,7 @@ Feature: My Account-Login
     Then user must successfully login to the web page
     And user close driver
 
- @login_2
+ @regression
 Scenario: log-in with incorrect username and incorrect password
     Given user go to "http://practice.automationtesting.in/"
     When user click on My Account Menu
@@ -21,7 +21,7 @@ Scenario: log-in with incorrect username and incorrect password
     Then user must verify error message Invalid username
     And user close driver
 
- @login_3
+ @smoke
   Scenario: log-in with correct username and empty password
     Given user go to "http://practice.automationtesting.in/"
     When user click on My Account Menu
@@ -31,7 +31,7 @@ Scenario: log-in with incorrect username and incorrect password
     Then user must verify error message (Invalid password)
     And user close driver
 
- @login_4
+ @testrunner
 Scenario: log-in with empty username and valid password
   Given user go to "http://practice.automationtesting.in/"
   When user click on My Account Menu
@@ -81,3 +81,4 @@ Scenario: log-in with empty username and valid password
     Then user press back button
     Then user shouldn’t be signed in to his account rather a general webpage must be visible
     And user close driver
+

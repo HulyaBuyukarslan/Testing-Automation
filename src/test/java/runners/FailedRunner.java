@@ -1,5 +1,4 @@
 package runners;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -15,12 +14,10 @@ import org.junit.runner.RunWith;
         },
         monochrome=true,
 
-        features = "src/test/resources/features",
+        features = "@target/failed_scenarios.txt",
         glue = {"stepdefinitions","hooks"},
-        tags = "@failed_myaccount_login",
         dryRun = false
 
 )
-
-public class Runner {
+public class FailedRunner {
 }
