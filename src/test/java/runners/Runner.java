@@ -11,13 +11,14 @@ import org.junit.runner.RunWith;
                 "html:target/default-cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
-                "rerun:target/failed_scenarios.txt"
+                "rerun:target/failed_scenarios.txt",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         monochrome=true,
 
         features = "src/test/resources/features",
         glue = {"stepdefinitions","hooks"},
-        tags = "@failed_myaccount_login",
+        tags = "@login_6 or @login_7 ",
         dryRun = false
 
 )
